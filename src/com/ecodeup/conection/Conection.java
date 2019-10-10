@@ -16,7 +16,7 @@ public class Conection {
 			dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
 			dataSource.setUsername("root");
 			dataSource.setPassword("root");
-			dataSource.setUrl("jdbc:mysql://localhost:3306/crud?useTimezone=true&serverTimezone=UTC");
+			dataSource.setUrl("jdbc:mysql://localhost:3306/crud?useTimezone=true&serverTimezone=UTC&useSSL = false");
 			dataSource.setInitialSize(50);
 			dataSource.setMaxIdle(100);
 			dataSource.setMaxTotal(70);

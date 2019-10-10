@@ -83,9 +83,6 @@ public class UsuarioController extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		} else if (option.equals("login")) {
-			RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
-			requestDispatcher.forward(request, response);
 		}
 		
 		//response.getWriter().append("Served at: ").append(request.getContextPath());

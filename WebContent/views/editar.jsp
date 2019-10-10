@@ -9,6 +9,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/scripts.js"></script>
 <title>Editar usuario</title>
 </head>
 <body>
@@ -30,7 +31,7 @@
 	<table class="table table-bordered mt-1">
 	  <thead>
 	    <tr>
-	      <th scope="col">#</th>
+	      <th scope="col">ID</th>
 	      <th scope="col">Nome</th>
 	      <th scope="col">Email</th>
 	      <th scope="col">Senha</th>
@@ -54,36 +55,36 @@
 	</table>
 </div>
 <div class="d-flex justify-content-center">
-	<form action="usuario" method="post" class="mt-2 p-4 border" style="width: 35rem;">
+	<form id="formEditar" action="usuario" method="post" class="mt-2 p-4 border" style="width: 35rem;">
 	<c:set var="usuarios" value="${usuarios}"></c:set>
 	<input type="hidden" name="option" value="editar"></input>
 	<input type="hidden" name="id" value="${usuarios.id}"></input>
 	  <div class="form-group">
 	    <label for="inputAddress">Nome</label>
-	    <input type="text" class="form-control" name="nome" id="inputNameEdit" placeholder="Seu nome aqui..." value="${usuarios.nome}">
+	    <input type="text" class="form-control" name="nome" id="idNomeEdita" placeholder="Seu nome aqui..." value="${usuarios.nome}">
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-6">
 	      <label for="inputEmail4">Email</label>
-	      <input type="email" class="form-control" name="email" id="inputEmail4Edit" placeholder="Email" value="${usuarios.email}">
+	      <input type="email" class="form-control" name="email" id="idEmailEdita" placeholder="Email" value="${usuarios.email}">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputPassword4">Senha</label>
-	      <input type="password" class="form-control" name="senha" id="inputPassword4Edit" placeholder="Senha" value="${usuarios.senha}">
+	      <input type="password" class="form-control" name="senha" id="idSenhaEdita" placeholder="Senha" value="${usuarios.senha}">
 	    </div>
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-2">
 	      <label for="inputCity">DDD</label>
-	      <input type="text" class="form-control" name="ddd" id="inputDddEdit" placeholder="Ex. 81" value="${usuarios.ddd}">
+	      <input type="text" class="form-control" name="ddd" id="idDddEdita" placeholder="Ex. 81" value="${usuarios.ddd}">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputEstado">Numero</label>
-	      <input type="text" class="form-control" name="numero" id="inputNumberEdit" placeholder="99999-9999" value="${usuarios.numero}">
+	      <input type="text" class="form-control" name="numero" id="idNumeroEdita" placeholder="99999-9999" value="${usuarios.numero}">
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="inputCEP">Tipo</label>
-	      <input type="text" class="form-control" name="tipo" id="inputTipoEdit" placeholder="Ex. Fixo" value="${usuarios.tipo}">
+	      <input type="text" class="form-control" name="tipo" id="idTipoEdita" placeholder="Ex. Fixo" value="${usuarios.tipo}">
 	    </div>
 	  </div>
 	  <input type="submit" value="Atualizar" class="btn btn-success"></input>

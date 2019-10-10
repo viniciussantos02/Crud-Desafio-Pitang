@@ -23,7 +23,7 @@
         <a class="nav-link" href="#">Consultar/Deletar/Editar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn btn-danger pr-3 pl-3" href="usuario?option=login">SAIR</a>
+        <a class="nav-link btn btn-danger pr-3 pl-3" href="usuario?option=index">SAIR</a>
       </li>
     </ul>
   </div>
@@ -34,7 +34,7 @@
 	<table class="table table-bordered mt-1">
 	  <thead>
 	    <tr>
-	      <th scope="col">#</th>
+	      <th scope="col">ID</th>
 	      <th scope="col">Nome</th>
 	      <th scope="col">Email</th>
 	      <th scope="col">Senha</th>
