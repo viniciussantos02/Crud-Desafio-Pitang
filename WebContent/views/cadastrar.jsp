@@ -48,7 +48,7 @@
 	      <input type="text" class="form-control" name="tipo" id="inputTipo" placeholder="Ex. Fixo">
 	    </div>
 	  </div>
-	  <input type="submit" value="cadastrar" class="btn btn-success"></input>
+	  <input type="submit" value="Cadastrar" class="btn btn-success"></input>
 	  <a href="usuario?option=index" class="btn btn-primary">Voltar</a>
 	</form>
 </div>

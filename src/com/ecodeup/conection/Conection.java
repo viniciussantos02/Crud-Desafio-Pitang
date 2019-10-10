@@ -17,9 +17,9 @@ public class Conection {
 			dataSource.setUsername("root");
 			dataSource.setPassword("root");
 			dataSource.setUrl("jdbc:mysql://localhost:3306/crud?useTimezone=true&serverTimezone=UTC");
-			dataSource.setInitialSize(20);
-			dataSource.setMaxIdle(15);
-			dataSource.setMaxTotal(20);
+			dataSource.setInitialSize(50);
+			dataSource.setMaxIdle(100);
+			dataSource.setMaxTotal(70);
 			dataSource.setMaxWaitMillis(5000);
 		}
 		return dataSource;

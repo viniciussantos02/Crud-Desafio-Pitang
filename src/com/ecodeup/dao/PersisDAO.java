@@ -159,6 +159,41 @@ public class PersisDAO {
 		return u;
 	}
 	
+	public boolean autentication(usuarios usuario) throws SQLException {
+		statement = null;
+		ResultSet resultSet = null;
+		String sql = null;
+		connection = obterConnection();
+		
+		try {
+			sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+			statement = connection.prepareStatement(sql);
+			statement.setString(1, usuario.getEmail());
+			statement.setString(2, usuario.getSenha());
+			resultSet = statement.executeQuery();
+			
+			if(resultSet.absolute(1)) {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(connection != null) {
+					connection.close();
+				}
+				if (statement != null) {
+					statement.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return false;
+	}
+	
 	//Obter conexão com o banco
 	private Connection obterConnection() throws SQLException {
 		return Conection.getConnection();

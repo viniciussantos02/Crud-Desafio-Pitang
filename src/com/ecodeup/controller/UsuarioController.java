@@ -86,7 +86,7 @@ public class UsuarioController extends HttpServlet {
 		} else if (option.equals("login")) {
 			RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
 			requestDispatcher.forward(request, response);
-		} 
+		}
 		
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
@@ -98,6 +98,7 @@ public class UsuarioController extends HttpServlet {
 		// TODO Auto-generated method stub
 		String option = request.getParameter("option");
 		
+		//Utilização do metodo cadastrar
 		if (option.equals("cadastrar")) {
 			PersisDAO persisDao = new PersisDAO();
 			usuarios usuario = new usuarios();
@@ -116,6 +117,7 @@ public class UsuarioController extends HttpServlet {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			//Utilização do metodo editar
 		} else if (option.equals("editar")) {
 			PersisDAO persisDao = new PersisDAO();
 			usuarios usuario = new usuarios();
@@ -131,6 +133,26 @@ public class UsuarioController extends HttpServlet {
 				persisDao.edit(usuario);
 				RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/atualizaSuccess.jsp");
 				requestDispatcher.forward(request, response);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			//Utilização do metodo de autenticação do usuario
+		} else if (option.equals("logar")) {
+			PersisDAO persisDao = new PersisDAO();
+			usuarios usuario = new usuarios();
+			usuario.setEmail(request.getParameter("emailLogin"));
+			usuario.setSenha(request.getParameter("senhaLogin"));
+			
+			try {
+				persisDao.autentication(usuario);
+				if (persisDao.autentication(usuario)) {
+					RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/home.jsp");
+					requestDispatcher.forward(request, response);
+				} else {
+					RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/login.jsp");
+					requestDispatcher.forward(request, response);
+				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

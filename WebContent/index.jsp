@@ -18,17 +18,18 @@
   </button>
 </nav>
 <div class="d-flex justify-content-center">
-	<form class="mt-5 p-4 border" style="width: 23rem;">
+	<form action="usuario" method="post" class="mt-5 p-4 border" style="width: 23rem;">
+	<input type="hidden" name="option" value="logar"></input>
 	  <div class="form-group">
 	    <label for="exampleInputEmail1">Endereço de email</label>
-	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+	    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="emailLogin" placeholder="Seu email">
 	    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
 	  </div>
 	  <div class="form-group">
 	    <label for="exampleInputPassword1">Senha</label>
-	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+	    <input type="password" class="form-control" id="exampleInputPassword1" name="senhaLogin" placeholder="Senha">
 	  </div>
-	  <a href="usuario?option=home" class="btn btn-success">Entrar</a>
+	  <input type="submit" value="Entrar" class="btn btn-success"></input>
 	  <a href="usuario?option=cadastrar" class="btn btn-primary">Cadastrar-se</a>
 	</form>
 </div>
