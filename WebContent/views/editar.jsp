@@ -55,36 +55,36 @@
 	</table>
 </div>
 <div class="d-flex justify-content-center">
-	<form id="formEditar" action="usuario" method="post" class="mt-2 p-4 border" style="width: 35rem;">
+	<form id="allForms" action="usuario" method="post" class="mt-2 p-4 border" style="width: 35rem;">
 	<c:set var="usuarios" value="${usuarios}"></c:set>
 	<input type="hidden" name="option" value="editar"></input>
 	<input type="hidden" name="id" value="${usuarios.id}"></input>
 	  <div class="form-group">
 	    <label for="inputAddress">Nome</label>
-	    <input type="text" class="form-control" name="nome" id="idNomeEdita" placeholder="Seu nome aqui..." value="${usuarios.nome}">
+	    <input type="text" class="form-control" name="nome" id="idNomeEdita" obrigatorio placeholder="Seu nome aqui..." value="${usuarios.nome}">
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-6">
 	      <label for="inputEmail4">Email</label>
-	      <input type="email" class="form-control" name="email" id="idEmailEdita" placeholder="Email" value="${usuarios.email}">
+	      <input type="email" class="form-control" name="email" id="idEmailEdita" obrigatorio placeholder="Email" value="${usuarios.email}">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputPassword4">Senha</label>
-	      <input type="password" class="form-control" name="senha" id="idSenhaEdita" placeholder="Senha" value="${usuarios.senha}">
+	      <input type="password" class="form-control" name="senha" id="idSenhaEdita" obrigatorio placeholder="Senha" value="${usuarios.senha}">
 	    </div>
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-2">
 	      <label for="inputCity">DDD</label>
-	      <input type="text" class="form-control" name="ddd" id="idDddEdita" placeholder="Ex. 81" value="${usuarios.ddd}">
+	      <input type="text" class="form-control" name="ddd" id="idDddEdita" obrigatorio placeholder="Ex. 81" value="${usuarios.ddd}">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputEstado">Numero</label>
-	      <input type="text" class="form-control" name="numero" id="idNumeroEdita" placeholder="99999-9999" value="${usuarios.numero}">
+	      <input type="text" class="form-control" name="numero" id="idNumeroEdita" obrigatorio placeholder="99999-9999" value="${usuarios.numero}">
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="inputCEP">Tipo</label>
-	      <input type="text" class="form-control" name="tipo" id="idTipoEdita" placeholder="Ex. Fixo" value="${usuarios.tipo}">
+	      <input type="text" class="form-control" name="tipo" id="idTipoEdita" obrigatorio placeholder="Ex. Fixo" value="${usuarios.tipo}">
 	    </div>
 	  </div>
 	  <input type="submit" value="Atualizar" class="btn btn-success"></input>

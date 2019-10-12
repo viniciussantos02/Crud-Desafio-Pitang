@@ -22,7 +22,7 @@
         <a class="nav-link" href="usuario?option=consultar">Consultar/Deletar/Editar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn btn-danger pr-3 pl-3" href="usuario?option=index">SAIR</a>
+        <a href="logout?option=sair" class="nav-link btn btn-danger pr-3 pl-3">SAIR</a>
       </li>
     </ul>
   </div>

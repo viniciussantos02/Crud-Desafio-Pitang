@@ -19,34 +19,34 @@
   </button>
 </nav>
 <div class="d-flex justify-content-center">
-	<form id="formCadastrar" action="usuario" method="post" class="mt-5 p-4 border" style="width: 30rem;">
+	<form id="allForms" action="usuario" method="post" class="mt-5 p-4 border" style="width: 30rem;">
 	<input type="hidden" name="option" value="cadastrar"></input>
 	  <div class="form-group">
 	    <label for="inputAddress">Nome</label>
-	    <input type="text" class="form-control" name="nome" id="idNomeCadastrar" placeholder="Seu nome aqui...">
+	    <input type="text" class="form-control" name="nome" id="idNomeCadastrar" obrigatorio placeholder="Seu nome aqui...">
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-6">
 	      <label for="inputEmail4">Email</label>
-	      <input type="email" class="form-control" name="email" id="idEmailCadastrar" placeholder="Email">
+	      <input type="email" class="form-control" name="email" id="idEmailCadastrar" obrigatorio placeholder="Email">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputPassword4">Senha</label>
-	      <input type="password" class="form-control" name="senha" id="idSenhaCadastrar" placeholder="Senha">
+	      <input type="password" class="form-control" name="senha" id="idSenhaCadastrar" obrigatorio placeholder="Senha">
 	    </div>
 	  </div>
 	  <div class="form-row">
 	    <div class="form-group col-md-2">
 	      <label for="inputCity">DDD</label>
-	      <input type="text" class="form-control" name="ddd" id="idDddCadastrar" placeholder="Ex. 81">
+	      <input type="text" class="form-control" name="ddd" id="idDddCadastrar" obrigatorio placeholder="Ex. 81">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputEstado">Numero</label>
-	      <input type="text" class="form-control" name="numero" id="idNumeroCadastrar" placeholder="99999-9999">
+	      <input type="text" class="form-control" name="numero" id="idNumeroCadastrar" obrigatorio placeholder="99999-9999">
 	    </div>
 	    <div class="form-group col-md-4">
 	      <label for="inputCEP">Tipo</label>
-	      <input type="text" class="form-control" name="tipo" id="idTipoCadastrar" placeholder="Ex. Fixo">
+	      <input type="text" class="form-control" name="tipo" id="idTipoCadastrar" obrigatorio placeholder="Ex. Fixo">
 	    </div>
 	  </div>
 	  <input type="submit" value="Cadastrar" class="btn btn-success"></input>

@@ -175,20 +175,10 @@ public class PersisDAO {
 			if(resultSet.absolute(1)) {
 				return true;
 			}
-			
+			statement.close();
+			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		} finally {
-			try {
-				if(connection != null) {
-					connection.close();
-				}
-				if (statement != null) {
-					statement.close();
-				}
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
 		}
 		
 		return false;

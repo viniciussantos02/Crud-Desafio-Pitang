@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -19,19 +20,25 @@
   </button>
 </nav>
 <div class="d-flex justify-content-center">
-	<form id="formLogin" action="usuario" method="post" class="mt-5 p-4 border" style="width: 23rem;">
+	<form id="allForms" action="login" method="post" class="mt-5 p-4 border" style="width: 23rem;">
 	<input type="hidden" name="option" value="logar"></input>
 	  <div class="form-group">
 	    <label for="exampleInputEmail1">Endereço de email</label>
-	    <input type="email" class="form-control" id="idEmailLogin" aria-describedby="emailHelp" name="emailLogin" placeholder="Seu email">
+	    <input type="email" obrigatorio class="form-control" id="idEmailLogin" obrigatorio aria-describedby="emailHelp" name="emailLogin" placeholder="Seu email">
 	    <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
 	  </div>
 	  <div class="form-group">
 	    <label for="exampleInputPassword1">Senha</label>
-	    <input type="password" class="form-control" id="idSenhaLogin" name="senhaLogin" placeholder="Senha">
+	    <input type="password" class="form-control" id="idSenhaLogin" obrigatorio name="senhaLogin" placeholder="Senha">
 	  </div>
 	  <input id="submitButton" type="submit"value="Entrar"  class="btn btn-success"></input>
 	  <a href="usuario?option=cadastrar" class="btn btn-primary">Cadastrar-se</a>
+	  <div class="mt-3">
+		  <font color="red">
+		  	<c:out value="${sessionScope.msgErro}"></c:out>
+		  </font>
+		  <c:set var="msgErro" value="" scope="session"/>
+	  </div>
 	</form>
 </div>
 </body>

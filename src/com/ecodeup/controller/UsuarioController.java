@@ -135,25 +135,6 @@ public class UsuarioController extends HttpServlet {
 				e.printStackTrace();
 			}
 			//Utilização do metodo de autenticação do usuario
-		} else if (option.equals("logar")) {
-			PersisDAO persisDao = new PersisDAO();
-			usuarios usuario = new usuarios();
-			usuario.setEmail(request.getParameter("emailLogin"));
-			usuario.setSenha(request.getParameter("senhaLogin"));
-			
-			try {
-				persisDao.autentication(usuario);
-				if (persisDao.autentication(usuario)) {
-					RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/home.jsp");
-					requestDispatcher.forward(request, response);
-				} else {
-					RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/login.jsp");
-					requestDispatcher.forward(request, response);
-				}
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 		}
 		
 		//doGet(request, response);

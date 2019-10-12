@@ -13,7 +13,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">CrudPitang</a>
+  <a class="navbar-brand" href="usuario?option=home">CrudPitang</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,7 +23,7 @@
         <a class="nav-link" href="#">Consultar/Deletar/Editar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link btn btn-danger pr-3 pl-3" href="usuario?option=index">SAIR</a>
+        <a class="nav-link btn btn-danger pr-3 pl-3" href="logout?option=sair">SAIR</a>
       </li>
     </ul>
   </div>
