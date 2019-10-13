@@ -38,8 +38,7 @@ public class UsuarioLogoutController extends HttpServlet {
 			if (session != null) {
 			    session.invalidate();
 			    System.out.println("finalizada");
-				RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
-				requestDispatcher.forward(request, response);
+			    response.sendRedirect("index.jsp");
 			}
 		}
 	}

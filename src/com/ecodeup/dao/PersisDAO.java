@@ -166,6 +166,7 @@ public class PersisDAO {
 		return u;
 	}
 	
+	//Metodo de login de usuario
 	public boolean authentication(Usuario usuario) throws SQLException {
 		statement = null;
 		ResultSet resultSet = null;

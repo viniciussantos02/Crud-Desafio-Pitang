@@ -20,6 +20,15 @@
 </script>
 </head>
 <body>
+<%
+	response.setHeader("Cache-control", "no-cache, no-store, must-revalidade");
+	response.setHeader("Pragma", "no-cache");
+	response.setHeader("Expires", "0");
+	
+	if(session.getAttribute("usuario") == null) {
+		response.sendRedirect("403Error.jsp");
+	}
+%>
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <a class="navbar-brand text-light" href="#">CrudPitang</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">

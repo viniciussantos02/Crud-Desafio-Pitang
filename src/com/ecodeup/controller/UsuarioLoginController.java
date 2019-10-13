@@ -42,18 +42,18 @@ public class UsuarioLoginController extends HttpServlet {
 			Usuario usuario = new Usuario();
 			
 			try {
+				HttpSession session = request.getSession();
 				usuario.setEmail(request.getParameter("emailLogin"));
 				usuario.setSenha(request.getParameter("senhaLogin"));
-				HttpSession session = request.getSession();
 				System.out.println(persisDao.authentication(usuario));
 				if (persisDao.authentication(usuario)) {
+					session.setAttribute("usuario", usuario);
 					session.setAttribute("msgErro", "");
 					RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/home.jsp");
 					requestDispatcher.forward(request, response);
 				} else {
-					session.setAttribute("msgErro", "Email ou senha incorreto!");
-					RequestDispatcher requestDispatcher = request.getRequestDispatcher("index.jsp");
-					requestDispatcher.forward(request, response);
+					session.setAttribute("msgErro", "Email ou Senha incorretos!");
+					response.sendRedirect("index.jsp");
 				}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

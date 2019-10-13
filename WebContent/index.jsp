@@ -15,9 +15,6 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
   <a class="navbar-brand text-light">CrudPitang</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 </nav>
 <div class="d-flex justify-content-center">
 	<form id="allForms" action="login" method="post" class="mt-5 p-4 border" style="width: 30rem;">
