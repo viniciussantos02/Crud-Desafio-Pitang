@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.ecodeup.conection.Conection;
-import com.ecodeup.model.usuarios;
+import com.ecodeup.model.Usuario;
 
 public class PersisDAO {
 	private Connection connection;
@@ -16,7 +16,7 @@ public class PersisDAO {
 	private boolean estadoOperacao;
 	
 	//Inserir usuário no banco
-	public boolean include(usuarios usuarios) throws SQLException {
+	public boolean include(Usuario usuarios) throws SQLException {
 		String sql = null;
 		estadoOperacao = false;
 		connection = obterConnection();
@@ -48,7 +48,7 @@ public class PersisDAO {
 	}
 	
 	//Editar usuário do banco
-	public boolean edit(usuarios usuarios) throws SQLException {
+	public boolean edit(Usuario usuarios) throws SQLException {
 		String sql = null;
 		estadoOperacao = false;
 		connection = obterConnection();
@@ -104,9 +104,9 @@ public class PersisDAO {
 	}
 	
 	//Lista todos usuários do banco
-	public List<usuarios> arrayUsuarios() throws SQLException {
+	public List<Usuario> arrayUsuarios() throws SQLException {
 		ResultSet resultSet = null;
-		List<usuarios> arrayUsuarios = new ArrayList<>();
+		List<Usuario> arrayUsuarios = new ArrayList<>();
 		String sql = null;
 		estadoOperacao = false;
 		connection = obterConnection();
@@ -116,7 +116,7 @@ public class PersisDAO {
 			statement = connection.prepareStatement(sql);
 			resultSet = statement.executeQuery(sql);
 			while (resultSet.next()) {
-				usuarios u = new usuarios();
+				Usuario u = new Usuario();
 				u.setId(resultSet.getInt(1));
 				u.setNome(resultSet.getString(2));
 				u.setEmail(resultSet.getString(3));
@@ -136,9 +136,9 @@ public class PersisDAO {
 	}
 	
 	//Consulta um usuário como o id informado
-	public usuarios getUsuario(int idUsuario) throws SQLException {
+	public Usuario getUsuario(int idUsuario) throws SQLException {
 		ResultSet resultSet = null;
-		usuarios u = new usuarios();
+		Usuario u = new Usuario();
 		String sql = null;
 		estadoOperacao = false;
 		connection = obterConnection();
@@ -166,7 +166,7 @@ public class PersisDAO {
 		return u;
 	}
 	
-	public boolean autentication(usuarios usuario) throws SQLException {
+	public boolean authentication(Usuario usuario) throws SQLException {
 		statement = null;
 		ResultSet resultSet = null;
 		String sql = null;

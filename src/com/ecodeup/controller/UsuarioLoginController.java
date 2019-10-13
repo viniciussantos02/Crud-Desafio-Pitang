@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.ecodeup.dao.PersisDAO;
-import com.ecodeup.model.usuarios;
+import com.ecodeup.model.Usuario;
 
 /**
  * Servlet implementation class UsuarioLoginController
@@ -39,14 +39,14 @@ public class UsuarioLoginController extends HttpServlet {
 		
 		if (option.equals("logar")) {
 			PersisDAO persisDao = new PersisDAO();
-			usuarios usuario = new usuarios();
+			Usuario usuario = new Usuario();
 			
 			try {
 				usuario.setEmail(request.getParameter("emailLogin"));
 				usuario.setSenha(request.getParameter("senhaLogin"));
 				HttpSession session = request.getSession();
-				System.out.println(persisDao.autentication(usuario));
-				if (persisDao.autentication(usuario)) {
+				System.out.println(persisDao.authentication(usuario));
+				if (persisDao.authentication(usuario)) {
 					session.setAttribute("msgErro", "");
 					RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/home.jsp");
 					requestDispatcher.forward(request, response);

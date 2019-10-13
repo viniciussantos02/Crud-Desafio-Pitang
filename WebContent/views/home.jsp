@@ -28,7 +28,7 @@
   </div>
 </nav>
 <div class="mt-5 border p-3">
-  <span class="text-muted"><b>Nenhuma ação realizada!</b></span>
+  <span class="text-muted"><b>Login efetuado com sucesso!!!</b></span>
 </div>
 </body>
 </html>

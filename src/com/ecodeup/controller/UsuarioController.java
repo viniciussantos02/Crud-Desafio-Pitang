@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.ecodeup.dao.PersisDAO;
-import com.ecodeup.model.usuarios;
+import com.ecodeup.model.Usuario;
 
 /**
  * Servlet implementation class UsuarioController
@@ -48,7 +48,7 @@ public class UsuarioController extends HttpServlet {
 			requestDispatcher.forward(request, response);
 		} else if (option.equals("consultar")) {
 			PersisDAO persisDao = new PersisDAO();
-			List<usuarios> lista = new ArrayList<>();
+			List<Usuario> lista = new ArrayList<>();
 			
 			try {
 				lista = persisDao.arrayUsuarios();
@@ -62,7 +62,7 @@ public class UsuarioController extends HttpServlet {
 		} else if (option.equals("editar")) {
 			int id = Integer.parseInt(request.getParameter("id"));
 			PersisDAO persisDao = new PersisDAO();
-			usuarios u = new usuarios();
+			Usuario u = new Usuario();
 			try {
 				u = persisDao.getUsuario(id);
 				request.setAttribute("usuarios", u);
@@ -98,7 +98,7 @@ public class UsuarioController extends HttpServlet {
 		//Utilização do metodo cadastrar
 		if (option.equals("cadastrar")) {
 			PersisDAO persisDao = new PersisDAO();
-			usuarios usuario = new usuarios();
+			Usuario usuario = new Usuario();
 			usuario.setNome(request.getParameter("nome"));
 			usuario.setEmail(request.getParameter("email"));
 			usuario.setSenha(request.getParameter("senha"));
@@ -117,7 +117,7 @@ public class UsuarioController extends HttpServlet {
 			//Utilização do metodo editar
 		} else if (option.equals("editar")) {
 			PersisDAO persisDao = new PersisDAO();
-			usuarios usuario = new usuarios();
+			Usuario usuario = new Usuario();
 			usuario.setId(Integer.parseInt(request.getParameter("id")));
 			usuario.setNome(request.getParameter("nome"));
 			usuario.setEmail(request.getParameter("email"));

@@ -6,7 +6,7 @@ import org.apache.tomcat.dbcp.dbcp2.BasicDataSource;
 import org.junit.Test;
 
 import com.ecodeup.dao.PersisDAO;
-import com.ecodeup.model.usuarios;
+import com.ecodeup.model.Usuario;
 
 public class PersisDAOTest {
 

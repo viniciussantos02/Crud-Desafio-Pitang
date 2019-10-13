@@ -1,6 +1,6 @@
 package com.ecodeup.model;
 
-public class usuarios {
+public class Usuario {
 	private int id;
 	private String nome;
 	private String email;
@@ -8,7 +8,7 @@ public class usuarios {
 	private int ddd;
 	private String numero;
 	private String tipo;
-	public usuarios(int id, String nome, String email, String senha, int ddd, String numero, String tipo) {
+	public Usuario(int id, String nome, String email, String senha, int ddd, String numero, String tipo) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -19,7 +19,7 @@ public class usuarios {
 		this.tipo = tipo;
 	}
 	
-	public usuarios() {
+	public Usuario() {
 		// TODO Auto-generated constructor stub
 	}
 
