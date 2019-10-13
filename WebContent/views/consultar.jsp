@@ -12,15 +12,15 @@
 <title>Consultar usuarios</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="usuario?option=home">CrudPitang</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <a class="navbar-brand text-light" href="usuario?option=home">CrudPitang</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Consultar/Deletar/Editar</a>
+      <li class="nav-item active mr-5 ml-5">
+        <a class="nav-link btn btn-info" href="#">Consultar/Deletar/Editar</a>
       </li>
       <li class="nav-item">
         <a class="nav-link btn btn-danger pr-3 pl-3" href="logout?option=sair">SAIR</a>
@@ -30,7 +30,7 @@
 </nav>
 <!-- Tabela que lista usuarios -->
 <div class="pr-3 pl-3">
-	<h3 class="mt-5">Lista de usuarios</h3>
+	<h3 class="mt-5 mb-3">Lista de usuarios</h3>
 	<table class="table table-bordered mt-1">
 	  <thead>
 	    <tr>
@@ -56,7 +56,7 @@
 	        <td><c:out value="${usuarios.numero}"></c:out></td>
 	        <td><c:out value="${usuarios.tipo}"></c:out></td>
 	        <td align="center">
-	        	<a href="usuario?option=editar&id=<c:out value="${usuarios.id}"></c:out>" class="btn btn-warning">Atualizar</a>
+	        	<a href="usuario?option=editar&id=<c:out value="${usuarios.id}"></c:out>" class="btn btn-warning mr-1">Atualizar</a>
 	        	<a href="usuario?option=deletar&id=<c:out value="${usuarios.id}"></c:out>" class="btn btn-danger">Deletar</a>
 	        </td>
 	      </tr>

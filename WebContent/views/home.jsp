@@ -11,15 +11,15 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">CrudPitang</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <a class="navbar-brand text-light" href="#">CrudPitang</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="usuario?option=consultar">Consultar/Deletar/Editar</a>
+      <li class="nav-item mr-5 ml-5">
+        <a class="nav-link btn btn-info" href="usuario?option=consultar">Consultar/Deletar/Editar</a>
       </li>
       <li class="nav-item">
         <a href="logout?option=sair" class="nav-link btn btn-danger pr-3 pl-3">SAIR</a>

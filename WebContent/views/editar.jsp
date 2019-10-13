@@ -11,23 +11,30 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 <title>Editar usuario</title>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#idDddEdita").keyup(function() {
+		    $("#idDddEdita").val(this.value.match(/[0-9]*/));
+		});
+	});
+</script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">CrudPitang</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <a class="navbar-brand text-light" href="#">CrudPitang</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="usuario?option=consultar">Consultar/Deletar/Editar</a>
+      <li class="nav-item ml-5">
+        <a class="nav-link btn btn-info" href="usuario?option=consultar">Consultar/Deletar/Editar</a>
       </li>
     </ul>
   </div>
 </nav>
 <div class="pr-3 pl-3">
-	<h3 class="mt-5">Você está editando o usuário:</h3>
+	<h3 class="mt-5 mb-3">Você está editando o usuário:</h3>
 	<table class="table table-bordered mt-1">
 	  <thead>
 	    <tr>
@@ -59,6 +66,7 @@
 	<c:set var="usuarios" value="${usuarios}"></c:set>
 	<input type="hidden" name="option" value="editar"></input>
 	<input type="hidden" name="id" value="${usuarios.id}"></input>
+	<h4 class="mb-4">Editar</h4>
 	  <div class="form-group">
 	    <label for="inputAddress">Nome</label>
 	    <input type="text" class="form-control" name="nome" id="idNomeEdita" obrigatorio placeholder="Seu nome aqui..." value="${usuarios.nome}">
@@ -76,7 +84,7 @@
 	  <div class="form-row">
 	    <div class="form-group col-md-2">
 	      <label for="inputCity">DDD</label>
-	      <input type="text" class="form-control" name="ddd" id="idDddEdita" obrigatorio placeholder="Ex. 81" value="${usuarios.ddd}">
+	      <input type="text" class="form-control" name="ddd" id="idDddEdita" maxlength="2" pattern="([0-9]{2})" obrigatorio placeholder="Ex. 81" value="${usuarios.ddd}">
 	    </div>
 	    <div class="form-group col-md-6">
 	      <label for="inputEstado">Numero</label>

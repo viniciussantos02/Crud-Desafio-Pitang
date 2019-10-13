@@ -13,15 +13,16 @@
 <title>Login</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand">CrudPitang</a>
+<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+  <a class="navbar-brand text-light">CrudPitang</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
   </button>
 </nav>
 <div class="d-flex justify-content-center">
-	<form id="allForms" action="login" method="post" class="mt-5 p-4 border" style="width: 23rem;">
+	<form id="allForms" action="login" method="post" class="mt-5 p-4 border" style="width: 30rem;">
 	<input type="hidden" name="option" value="logar"></input>
+	<h4 class="mb-4">Login</h4>
 	  <div class="form-group">
 	    <label for="exampleInputEmail1">Endereço de email</label>
 	    <input type="email" obrigatorio class="form-control" id="idEmailLogin" obrigatorio aria-describedby="emailHelp" name="emailLogin" placeholder="Seu email">
@@ -31,7 +32,7 @@
 	    <label for="exampleInputPassword1">Senha</label>
 	    <input type="password" class="form-control" id="idSenhaLogin" obrigatorio name="senhaLogin" placeholder="Senha">
 	  </div>
-	  <input id="submitButton" type="submit"value="Entrar"  class="btn btn-success"></input>
+	  <input id="submitButton" type="submit"value="Entrar"  class="btn btn-success mr-1"></input>
 	  <a href="usuario?option=cadastrar" class="btn btn-primary">Cadastrar-se</a>
 	  <div class="mt-3">
 		  <font color="red">

@@ -37,11 +37,12 @@ public class PersisDAO {
 			estadoOperacao = statement.executeUpdate() > 0;
 			connection.commit();
 			statement.close();
-			connection.close();
 		} catch (SQLException e) {
 			connection.rollback();
 			e.printStackTrace();
-		}
+		} finally{
+            connection.close();
+        }
 		
 		return estadoOperacao;
 	}
@@ -68,11 +69,12 @@ public class PersisDAO {
 			estadoOperacao = statement.executeUpdate() > 0;
 			connection.commit();
 			statement.close();
-			connection.close();
 		} catch (SQLException e){
 			connection.rollback();
 			e.printStackTrace();
-		}
+		} finally{
+            connection.close();
+        }
 		return estadoOperacao;
 	}
 	
@@ -92,11 +94,12 @@ public class PersisDAO {
 			estadoOperacao = statement.executeUpdate() > 0;
 			connection.commit();
 			statement.close();
-			connection.close();
 		} catch (SQLException e){
 			connection.rollback();
 			e.printStackTrace();
-		}
+		} finally{
+            connection.close();
+        }
 		return estadoOperacao;
 	}
 	
@@ -125,7 +128,9 @@ public class PersisDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		} finally{
+            connection.close();
+        }
 		
 		return arrayUsuarios;
 	}
@@ -154,7 +159,9 @@ public class PersisDAO {
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		} finally{
+            connection.close();
+        }
 		
 		return u;
 	}
@@ -176,10 +183,11 @@ public class PersisDAO {
 				return true;
 			}
 			statement.close();
-			connection.close();
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
+		} finally{
+            connection.close();
+        }
 		
 		return false;
 	}
